@@ -1,0 +1,655 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 44px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main {
+
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+}
+
+/*############# HEADER#################*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 100px;
+    height: 36px;
+}
+
+.input {
+
+    border-radius: 2px;
+    border: 1px solid #D9D9D9;
+    color: #BFBFBF;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    font-style: normal;
+    /*Отступ для placeholder*/
+    padding: 8px 8px 8px 35px;
+}
+
+.input-address {
+    /*width: 690px; !*Убрали для адаптивности*!*/
+    flex: 0.8; /*Добавили для адаптивности*/
+    background: #FFFFFF url("../img/home.svg") no-repeat left 11px center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    min-width: 97px;
+    height: 40px;
+    border-radius: 2px;
+    padding: 8px auto;
+}
+
+.button-primary {
+    /* Daybreak Blue / blue-6 */
+    background: #1890FF;
+    border: 1px solid #1890FF;
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.button-basket {
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.0015);
+    color: #595959;
+}
+
+.button-icon {
+    /*width: 16px;*/
+    /*height: 16px;*/
+    margin-right: 6px;
+}
+
+.button-text {
+    /* Regular / 16px | 24px */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*############# PROMO BLOCK#################*/
+.promo {
+    box-shadow: 0 7px 12px rgba(158, 158, 163, 0.1);
+    border-radius: 10px;
+    background: #FFF1B8 url("../img/pizza-promo.png") no-repeat top -78px right -91px / 524px;
+    font-style: normal;
+    font-weight: bold;
+    color: #302C34;
+    padding: 68px 70px;
+    margin-bottom: 56px;
+}
+
+
+.promo-title {
+    font-size: 39px;
+    line-height: 46px;
+}
+
+.promo-text {
+    font-weight: normal;
+    font-size: 24px;
+    max-width: 500px;
+    line-height: 28px;
+}
+
+/*############# Restaraunts#################*/
+.section-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #000000;
+    margin: 0 30px 0 0;
+}
+
+.input-search {
+    background: #FFFFFF;
+    width: 306px;
+    background: #FFFFFF url("../img/search.svg") no-repeat left 11px center;
+    margin-left: auto;
+
+}
+
+.section-heading {
+    display: flex;
+    /*justify-content: space-between; !*убрали когда делали страницу с ресторанами а на главной поставлили margin-left:auto*!*/
+    align-items: center;
+    margin-bottom: 44px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    min-height: 380px; /*Сделали для адаптивности*/
+    flex-basis: 29%; /*Добавили для адаптивности*/
+    text-decoration: none;
+
+
+}
+
+.card-image {
+    width: 100%;
+    /*width: 384px;*/
+    /*height: 250px;*/
+    height: auto;
+    object-fit: cover;
+}
+
+/*все что под картинкой*/
+.card-text {
+    padding: 20px 23px 35px 23px;
+    width: 320px;
+    height: 32px;
+    font-style: normal;
+    font-weight: normal;
+
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+    margin: 0;
+
+}
+.card-tag {
+    width: 60px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #262626;
+    border-radius: 2px;
+    padding: 1px 8px;
+}
+
+/*Рейтинг цена категория*/
+.card-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* если длинное название категории  - переходим на  другую строку*/
+}
+
+.rating {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFC107;
+    margin-right: 26px;
+    display: flex;
+    align-items: center;
+
+}
+.price {
+    margin-right: 10px;
+}
+
+.price, .category {
+font-size: 18px;
+line-height: 32px;
+white-space: nowrap; /*чтобы не переносилось на  другую строку*/
+color: #8C8C8C;
+}
+
+.category {
+/*Три свойства ниже - чтобы влезали длинные слова*/
+text-overflow: ellipsis; /* если не влезает - видим три точки ...*/
+overflow: hidden;
+white-space: nowrap;
+max-width: 150px;
+}
+
+
+.price:after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: #8C8C8C;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    border-radius: 50%;
+
+
+}
+
+/*#############FOOTER############*/
+.footer-block {
+    padding: 60px 0;
+}
+
+.footer-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    margin-right: auto;
+    margin-left: 35px;
+}
+
+.footer-link {
+    display: inline-block;
+    color: #595959;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.footer-link:not(:last-child) {
+    margin-right: 15px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-link:not(:last-child) {
+    margin-right: 21px;
+}
+
+.modal{
+    position:fixed;
+    left: 0 ;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /*display: flex; !*на время отладки *!*/
+    display: none; /*заменяется на display:flex при установки в div'у класса .is_open*/
+}
+.is_open{
+    display: flex; /*проставляем классом модальному окну чтобы появился*/
+}
+.modal-dialog{
+    max-width: 780px;
+    width: 95%;
+    /*min-height: 552px;*/
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin:auto;
+    padding: 40px 45px;
+}
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.modal-title{
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+.close{
+    font-size: 36px;
+    background-color: transparent;
+    border: none;
+}
+.food-row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 15px;
+
+}
+.food-price{
+    margin-left: auto;
+    margin-right: 47px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+}
+.food-name{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+.food-counter{
+    display: flex;
+    align-items: center;
+}
+.counter-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #40A9FF;
+    border-radius: 2px;
+    width: 39px;
+    height: 32px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #40A9FF;
+}
+.counter{
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.modal-body{
+    margin-bottom: 52px;
+}
+.modal-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.footer-buttons{
+    display: flex;
+    align-items: center;
+
+}
+.modal-pricetag{
+    background: #262626;
+    border-radius: 5px;
+    color: white;
+    padding: 15px  20px;
+    font-size: 20px;
+    line-height: 23px;
+}
+/*######MEDIA##########*/
+@media (max-width: 1366px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .promo {
+        background-position: center right -300px;
+        background-size: 650px;
+        padding: 50px;
+
+    }
+    .card-image {
+        /*width: 330px;*/
+        min-width: 330px;
+    }
+    .card-tag{
+        margin-right: 50px;
+
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 780px;
+    }
+
+    .promo {
+        padding: 50px;
+        background-position: center right -200px;
+        background-size: 400px;
+    }
+
+    .promo-text {
+        font-size: 20px;
+        max-width: 400px;
+    }
+
+    .card {
+        flex-basis: 49%;
+    }
+.card-tag{
+    margin-right: 5px;
+
+}
+    .footer-link {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 560px;
+    }
+
+    .card {
+        flex-basis: 49%;
+    }
+
+    .card-image {
+        /*width: 330px;*/
+        min-width: 330px;
+    }
+    .card-tag{
+        margin-right: 35px;
+
+    }
+    .card-info {
+        flex-wrap: wrap;
+    }
+
+    .rating {
+        flex-basis: 100%;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .promo-title {
+        font-size: 24px;
+    }
+
+    .promo {
+        background-size: 350px;
+        background-position: bottom 80px right -200px;
+    }
+
+    .promo-text {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 578px) {
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .input-address {
+        order: 5;
+        flex: 1;
+        margin-top: 15px;
+
+    }
+
+    .promo {
+        background-image: none;
+    }
+
+    .promo-title {
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 20px;
+
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .card-image {
+        width: 90%;
+    }
+
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-block {
+        align-items: flex-start;
+    }
+
+    .footer-nav {
+        order: 0;
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        order: 1;
+        margin-right: 30px;
+    }
+
+    .social-links {
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        width: 90%;
+    }
+    .input-address {
+        order: 5;
+        flex: 100%;
+        margin-top: 15px;
+
+    }
+
+    .button-text {
+        display: none;
+    }
+
+    .button {
+        min-height: 40px;
+        width: 40px;
+    }
+    .button-card-text{
+        display: none;
+    }
+    .button-icon{
+        margin: 0;
+    }
+
+    .promo {
+        padding: 20px;
+    }
+
+    .section-heading {
+        flex-wrap: wrap;
+    }
+
+    .footer-block {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+        order: 0;
+    }
+
+    .footer-nav {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .footer-link:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+/*##############РЕСТОРАНЫ#############*/
+.card-title-reg{
+    font-weight: 400;
+}
+.ingredients{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8C8C8C;
+}
+
+.button-card-text{
+    margin-right: 1px;
+    font-size: 14px;
+}
+.card-buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 24px; /*???*/
+
+}
+.card-price-bold{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 32px;
+}
+.card-product{
+    min-height: 430px;
+
+}
+
+
+
+
+
+
