@@ -115,7 +115,7 @@ button {
     height: 24px;
     background-color: #fff;
     -webkit-mask: url("../img/icon/user.svg") no-repeat 50% 50%;
-    mask: url("../img/iconS/user.svg") no-repeat 50% 50%;
+    mask: url("../img/icon/user.svg") no-repeat 50% 50%;
     /* background-image: url("../img/icon/user.svg"); */
 
     background-repeat: no-repeat;
@@ -840,5 +840,13 @@ button {
 
     .footer-link:not(:last-child) {
         margin-right: 0;
+    }
+    .modal-dialog {
+        padding: 20px;
+        width: 100%;
+    }
+    .close-auth{
+        top: 2px;
+        right: 5px;
     }
 }
